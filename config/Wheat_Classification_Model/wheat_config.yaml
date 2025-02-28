@@ -1,0 +1,90 @@
+# App configuration
+app:
+  description: "This application classifies wheat kernels into three varieties (Kama, Rosa, and Canadian) based on geometric parameters. The classification uses a machine learning model trained with PyCaret."
+  model_path: "wheat-seeds-pipeline"
+  css_path: "style.css"
+
+# Wheat varieties mapping
+wheat_types:
+  1: "Kama"
+  2: "Rosa"
+  3: "Canadian"
+
+# Input field configurations
+input_fields:
+  area:
+    label: "Area"
+    min_value: 5.0
+    max_value: 25.0
+    default_value: 15.0
+    help: "Area of the kernel (5.0 to 25.0)"
+  perimeter:
+    label: "Perimeter"
+    min_value: 5.0
+    max_value: 25.0
+    default_value: 14.0
+    help: "Perimeter of the kernel (5.0 to 25.0)"
+  compactness:
+    label: "Compactness"
+    min_value: 0.50
+    max_value: 1.00
+    default_value: 0.85
+    help: "Compactness = 4*pi*Area/Perimeter^2 (0.50 to 1.00)"
+  length:
+    label: "Kernel Length"
+    min_value: 1.0
+    max_value: 10.0
+    default_value: 5.5
+    help: "Length of the kernel (1.0 to 10.0)"
+  width:
+    label: "Width"
+    min_value: 1.0
+    max_value: 10.0
+    default_value: 3.5
+    help: "Width of the kernel (1.0 to 10.0)"
+  asymmetry:
+    label: "Asymmetry Coefficient"
+    min_value: 0.0
+    max_value: 15.0
+    default_value: 3.0
+    help: "Asymmetry coefficient of the kernel (0.0 to 15.0)"
+  groove:
+    label: "Groove Length"
+    min_value: 1.0
+    max_value: 10.0
+    default_value: 5.5
+    help: "Length of kernel groove (1.0 to 10.0)"
+
+# Sample data for template
+sample_data:
+  - Area: 15.26
+    Perimeter: 14.84
+    Compactness: 0.871
+    Length: 5.763
+    Width: 3.312
+    AsymmetryCoeff: 2.221
+    Groove: 5.22
+  - Area: 14.88
+    Perimeter: 14.57
+    Compactness: 0.8811
+    Length: 5.554
+    Width: 3.333
+    AsymmetryCoeff: 1.018
+    Groove: 5.0
+  - Area: 14.29
+    Perimeter: 14.09
+    Compactness: 0.905
+    Length: 5.291
+    Width: 3.337
+    AsymmetryCoeff: 2.699
+    Groove: 4.825
+
+# Required columns for batch prediction
+required_columns:
+  - "Area"
+  - "Perimeter"
+  - "Compactness"
+  - "Length"
+  - "Width"
+  - "AsymmetryCoeff"
+  - "Groove"
