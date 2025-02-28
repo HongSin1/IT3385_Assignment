@@ -11,8 +11,8 @@ st.set_page_config(
 # Dictionary of available apps
 apps = {
     "🏠 Home Page": None,
-    "🏡 House Price Prediction": "app.py",
-    "🌾 Wheat Kernel Classification": "wheat_classification_app.py"
+    "🏡 House Price Prediction": "src/house_price_prediction_app.py",
+    "🌾 Wheat Kernel Classification": "src/wheat_classification_app.py"
 }
 
 # Sidebar Navigation
