@@ -4,10 +4,10 @@ import pandas as pd
 import numpy as np
 
 # Load the trained model
-model = joblib.load(r'C:\Users\hongs\Downloads\IT3385_Assignment\pipeline1.pkl')
+model = joblib.load(r'models/pipeline1.pkl')
 
 # Load the CSV file containing possible input data
-csv_path = r'C:\Users\hongs\Downloads\IT3385_Assignment\input_data_for_predictions.csv'
+csv_path = r'data/processed/input_data_for_predictions.csv'
 input_data_df = pd.read_csv(csv_path)
 
 # Define numerical and categorical features as in your PyCaret setup
